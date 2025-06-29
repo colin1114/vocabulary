@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词听写系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>单词听写系统</h1>
+            <div id="rating-display">
+                <span id="rating-label">当前评级: Unrated (0)</span>
+                <button id="show-history-btn">评级历史</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="left-panel">
+                <div class="section-list">
+                    <h2>单词库列表</h2>
+                    <select id="sections-select" multiple size="10"></select>
+                </div>
+                <div class="button-group">
+                    <button id="add-word-btn">添加单词</button>
+                    <button id="delete-word-btn">删除单词</button>
+                </div>
+                <div class="button-group">
+                    <button id="add-section-btn">添加集合</button>
+                    <button id="delete-section-btn">删除集合</button>
+                </div>
+                <button id="start-test-btn" class="accent-btn">开始听写</button>
+                <button id="show-mistakes-btn">查看错误次数</button>
+                <button id="reset-mistakes-btn">重置错误次数</button>
+            </div>
+
+            <div class="right-panel">
+                <div id="test-info">选择单词集合并点击'开始听写'按钮</div>
+                
+                <div class="question-frame">
+                    <h2>单词听写</h2>
+                    <div class="progress-frame">
+                        <span id="progress-label"></span>
+                    </div>
+                    <div id="question-label" class="question-label">请准备...</div>
+                    <div id="hint-label" class="hint-label"></div>
+                    <div id="attempts-label" class="attempts-label"></div>
+                    <input type="text" id="answer-input" placeholder="请输入英文单词">
+                    <div id="feedback-label" class="feedback-label"></div>
+                    <div class="btn-frame">
+                        <button id="check-btn">检查</button>
+                        <button id="skip-btn" style="display:none;">跳过</button>
+                        <button id="end-btn">结束测试</button>
+                    </div>
+                    <button id="retry-btn" class="accent-btn" style="display:none;">重新测试</button>
+                </div>
+
+                <div class="result-frame">
+                    <h2>测试结果</h2>
+                    <div id="result-content"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">标题</h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
