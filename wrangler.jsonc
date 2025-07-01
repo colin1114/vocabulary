@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "noisy-hall-3df5",
+	"name": "vocabulary",
 	"main": "src/index.js",
 	"compatibility_date": "2025-06-28",
 	"observability": {
